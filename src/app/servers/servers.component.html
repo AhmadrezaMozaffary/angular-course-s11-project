@@ -6,6 +6,8 @@
         class="list-group-item"
         *ngFor="let server of servers"
         [routerLink]="[server.id]"
+        [queryParams]="{ allowEditing: server.id === 3 }"
+        fragment="editing"
       >
         {{ server.name }} ({{ server.status === "online" ? "✅" : "❌" }})
       </a>

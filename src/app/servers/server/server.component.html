@@ -9,5 +9,10 @@
     >{{ server?.status }}</span
   >
 </p>
-<button class="btn btn-danger" routerLink="edit">Edit</button>
+<button
+  class="btn btn-danger"
+  (click)="onEdit()"
+>
+  Edit
+</button>
 <button class="btn" routerLink="/servers">close</button>
