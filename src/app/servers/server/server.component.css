@@ -1,0 +1,12 @@
+.online {
+  background: green;
+  color: white;
+  padding: 4px;
+  border-radius: 3px;
+}
+.offline {
+  background: red;
+  color: white;
+  border-radius: 3px;
+  padding: 4px;
+}

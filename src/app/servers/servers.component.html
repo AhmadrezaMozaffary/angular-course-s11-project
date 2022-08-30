@@ -4,15 +4,17 @@
       <a
         href="#"
         class="list-group-item"
-        *ngFor="let server of servers">
-        {{ server.name }}
+        *ngFor="let server of servers"
+        [routerLink]="[server.id]"
+      >
+        {{ server.name }} ({{ server.status === "online" ? "✅" : "❌" }})
       </a>
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
-    <app-edit-server></app-edit-server>
-    <hr>
-    <app-server></app-server>
+    <!-- <app-edit-server></app-edit-server>
+    <hr />
+    <app-server></app-server> -->
+    <router-outlet></router-outlet>
   </div>
 </div>
-

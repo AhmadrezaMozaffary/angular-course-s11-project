@@ -1,2 +1,8 @@
-<p>User with ID _ID_ loaded.</p>
-<p>User name is _NAME_</p>
+<div *ngIf="showUser; else clickUser" class="user-card">
+  <h3>User with ID {{ user.id }} loaded.</h3>
+  <h3>User name is {{ user.name }}</h3>
+  <button class="btn btn-primary" (click)="onBack()">Back &larr;</button>
+</div>
+<ng-template #clickUser>
+  <h3>Click on one of the users!</h3>
+</ng-template>

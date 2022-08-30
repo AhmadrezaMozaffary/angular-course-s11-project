@@ -1,2 +1,13 @@
-<h5>{{ server.name }}</h5>
-<p>Server status is {{ server.status }}</p>
+<h5>{{ server?.name }}</h5>
+<p>
+  Server status is
+  <span
+    [ngClass]="{
+      online: server?.status === 'online',
+      offline: server?.status === 'offline'
+    }"
+    >{{ server?.status }}</span
+  >
+</p>
+<button class="btn btn-danger" routerLink="edit">Edit</button>
+<button class="btn" routerLink="/servers">close</button>
