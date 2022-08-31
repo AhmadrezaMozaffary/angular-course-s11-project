@@ -23,6 +23,12 @@
         >
           <a routerLink="/users">Users</a>
         </li>
+        <li *ngIf="!loggedIn" style="cursor: pointer">
+          <a class="bg-success" (click)="onLogin()">Login</a>
+        </li>
+        <li *ngIf="loggedIn" style="cursor: pointer">
+          <a class="bg-info" (click)="onLogout()">Logout</a>
+        </li>
       </ul>
     </div>
   </div>
